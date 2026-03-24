@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #1f1f29;
+    --primary-color: #0d3b66;
     --secondary-color: #931628;
     --accent-color: #ee964b;
     --light-color: #ffffff;
@@ -10,7 +10,9 @@
 }
 
 /* RESET */
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -81,7 +83,7 @@ nav a.active {
     border-radius: 12px;
 }
 
-/* TITLE BAR */
+/* HERO TITLE */
 .hero h1 {
     position: absolute;
     top: 20px;
@@ -91,40 +93,32 @@ nav a.active {
     font-size: 2.2rem;
     color: white;
     background: rgba(0, 0, 0, 0.6);
+    font-family: var(--heading-font);
 }
 
-/* CONTENT BOX */
-.hero-box {
+/* HERO ARTICLE BOX */
+.hero article {
     position: absolute;
     top: 120px;
     right: 40px;
     width: 300px;
-
-    background-color: rgba(147, 22, 40, 0.75);
+    background-color: rgba(147, 22, 40, 0.85);
     padding: 20px;
     border-radius: 8px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    color: white;
+    font-family: var(--body-font);
 }
 
-/* TEXT */
-.hero-box p {
-    flex: 1;
-    font-size: 1rem;
-}
-
-/* IMAGE ON RIGHT */
-.hero-box img {
-    width: 120px;
+.hero article img {
+    float: right;
+    width: 100px;
+    margin-left: 15px;
     border-radius: 6px;
     border: 3px solid white;
 }
 
-/* CARDS */
-.card {
+/* SECTIONS */
+section {
     background: white;
     margin: 80px 20px 20px 20px;
     padding: 25px;
@@ -132,9 +126,10 @@ nav a.active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card h2 {
+section h2 {
     margin-bottom: 10px;
     color: var(--primary-color);
+    font-family: var(--heading-font);
 }
 
 /* FOOTER */
@@ -146,21 +141,17 @@ footer {
     border-top: 1px solid #ddd;
 }
 
-/* SOCIAL */
+/* SOCIAL MEDIA */
 .socialmedia {
     display: flex;
     gap: 10px;
 }
 
-.socialmedia img {
+.socialmedia a img {
     width: 28px;
     transition: transform 0.2s;
 }
 
-.socialmedia img:hover {
+.socialmedia a img:hover {
     transform: scale(1.2);
-}
-
-.socialmedia img.instagram-icon {
-    width: 30px !important;
 }
