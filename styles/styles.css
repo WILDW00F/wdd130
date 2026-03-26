@@ -20,20 +20,60 @@
 nav {
     background-color: var(--primary-color);
     padding: var(--standard-padding);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: var(--secondary-color);
     display: block;
-    padding: 20px;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #4682b4;
+}
+
+header,
+.grid,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
 h1 {
     color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    gap: 1rem;
+    align-items: start;
+    margin-top: 1rem;
 }
 
 main {
+    grid-column: 2 / 3;
+    margin: 0 0 1rem 0;
     max-width: var(--max-content-width);
+}
+
+aside {
+    width: 20rem;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    position: relative;
 }
 
 main img {
@@ -46,26 +86,17 @@ main img {
     box-shadow: 0 0 30px var(--box-shadow-color);
 }
 
+aside img {
+    width: var(--aside-image-width);
+    height: auto;
+}
+
 img {
     width: var(--image-width);
     height: auto;
     border: 1px solid var(--border-color);
     padding: 2px;
     box-shadow: 0 0 30px var(--box-shadow-color);
-}
-
-p {
-    padding: 0;
-}
-
-aside {
-    width: 300px;
-    position: relative;
-}
-
-aside img {
-    width: var(--aside-image-width);
-    height: auto;
 }
 
 aside h2 {
@@ -76,13 +107,9 @@ aside h2 {
     padding: 5px;
 }
 
-footer {
-    margin-top: 20px;
-    border-top: 2px solid var(--border-color);
-    text-align: center;
+p {
+    padding: 0;
 }
-
-/* Class Selectors */
 
 .box {
     margin: 1rem;
@@ -90,4 +117,18 @@ footer {
     padding: 1rem;
     background-color: var(--light-bg);
     color: var(--border-color);
+}
+
+footer {
+    margin-top: 20px;
+    border-top: 2px solid var(--border-color);
+    text-align: center;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+main::after {
+    content: "";
+    display: table;
+    clear: both;
 }
