@@ -1,3 +1,6 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
 :root {
     --primary-color: #0d3b66;
     --accent-color: #9c5a2e;
@@ -8,7 +11,9 @@
     --body-font: "Roboto", Arial, sans-serif;
 }
 
-/* RESET */
+/* =========================
+   RESET
+========================= */
 *,
 *::before,
 *::after {
@@ -17,7 +22,9 @@
     box-sizing: border-box;
 }
 
-/* BODY */
+/* =========================
+   GLOBAL
+========================= */
 body {
     font-family: var(--body-font);
     color: var(--dark-color);
@@ -25,87 +32,94 @@ body {
     line-height: 1.6;
 }
 
-/* MAIN CONTAINER */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PAGE CONTAINER WIDTH */
 header,
 main,
 footer {
     max-width: 900px;
     margin: 20px auto;
-    background-color: var(--light-color);
-    border-radius: 12px;
+    padding: 0 10px;
 }
 
-/* HEADER */
-header {
-    border-bottom: 1px solid #ddd;
-}
-
+/* =========================
+   HEADER (GRID)
+========================= */
 .header-container {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 120px 1fr;
     align-items: center;
-    padding: 15px;
 }
 
 header img {
-    width: 80px;
+    width: 100px;
 }
 
-/* NAV */
+/* =========================
+   NAV (FLEX)
+========================= */
 nav ul {
     display: flex;
-    list-style: none;
+    justify-content: flex-end;
     gap: 20px;
+    list-style: none;
 }
 
 nav a {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 600;
-    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-    color: var(--accent-color);
+    background-color: var(--accent-color);
+    color: white;
 }
 
-/* HERO CONTAINER */
+/* =========================
+   HERO
+========================= */
 .hero {
     position: relative;
     margin-top: 20px;
 }
 
 .hero img {
-    width: 100%;
-    display: block;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
-/* HERO TITLE */
 .hero h1 {
     position: absolute;
     top: 20px;
     width: 100%;
     text-align: center;
-    padding: 15px;
-    font-size: 2.2rem;
+    padding: 12px;
+    font-size: 2rem;
     color: white;
     background: rgba(0, 0, 0, 0.6);
     font-family: var(--heading-font);
 }
 
-/* HERO ARTICLE BOX */
 .hero article {
     position: absolute;
-    top: 120px;
-    right: 40px;
-    width: 300px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    max-width: 600px;
     background-color: rgba(147, 22, 40, 0.85);
     padding: 20px;
     border-radius: 8px;
     color: white;
-    font-family: var(--body-font);
 }
 
 .hero article img {
@@ -113,44 +127,87 @@ nav a.active {
     width: 100px;
     margin-left: 15px;
     border-radius: 6px;
-    border: 3px solid white;
+    border: 2px solid white;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 section {
-    background: white;
-    margin: 80px 20px 20px 20px;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+    padding: 20px;
+    background: #f7f7f7;
+    border-radius: 10px;
 }
 
 section h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
     color: var(--primary-color);
     font-family: var(--heading-font);
 }
 
-/* FOOTER */
+/* =========================
+   HISTORY (GRID)
+========================= */
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.history-grid img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+/* =========================
+   ADVENTURE GALLERY (FLEX)
+========================= */
+.adventure-gallery {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.adventure-gallery figure {
+    flex: 1 1 150px;
+    text-align: center;
+}
+
+.adventure-gallery img {
+    border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
 }
 
-/* SOCIAL MEDIA */
 .socialmedia {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
-.socialmedia a img {
-    width: 28px;
+.socialmedia img {
+    width: 30px;
     transition: transform 0.2s;
 }
 
-.socialmedia a img:hover {
+.socialmedia img:hover {
     transform: scale(1.2);
 }
