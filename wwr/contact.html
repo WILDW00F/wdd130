@@ -13,8 +13,8 @@
 
 <body>
     <header>
-        <div class="header-container"> <img src="images/z-therapidssplash.jpg"
-              alt="Rafting Company Logo">
+        <div class="header-container">
+            <img src="images/z-therapidssplash.jpg" alt="Rafting Company Logo">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -25,10 +25,13 @@
             </nav>
         </div>
     </header>
+
     <main>
 
+        <h1>White Water Rafting Company</h1>
+
         <section class="company-info">
-            <h2>White Water Rafting Company</h2>
+            <h2>Contact Information</h2>
             <p>123 Main River Street</p>
             <p>Kolob, California</p>
             <p>+1 999 999 9999</p>
@@ -43,10 +46,10 @@
                   loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-            </div>
 
             <div class="contact-form">
                 <h2>Send Us a Message</h2>
+
                 <form action="submit_form.php" method="POST">
 
                     <label for="name">Name:</label>
@@ -57,12 +60,22 @@
 
                     <fieldset>
                         <legend>Purpose of Message:</legend>
-                        <label><input type="radio" name="purpose" value="general" required> General
-                            Inquiry</label>
-                        <label><input type="radio" name="purpose" value="reservation"> Reservation
-                            Question</label>
-                        <label><input type="radio" name="purpose" value="website"> Website
-                            Suggestion</label>
+
+                        <label for="general">
+                            <input type="radio" id="general" name="purpose" value="general"
+                              required>
+                            General Inquiry
+                        </label>
+
+                        <label for="reservation">
+                            <input type="radio" id="reservation" name="purpose" value="reservation">
+                            Reservation Question
+                        </label>
+
+                        <label for="website">
+                            <input type="radio" id="website" name="purpose" value="website">
+                            Website Suggestion
+                        </label>
                     </fieldset>
 
                     <label for="message">Message:</label>
@@ -75,6 +88,7 @@
                     </div>
 
                     <button type="submit">Get in Touch!</button>
+
                 </form>
             </div>
 
@@ -82,29 +96,43 @@
 
         <section class="team">
             <h2>We Are Here to Serve You</h2>
+
             <div class="team-grid">
                 <figure>
-                    <img src="images/john_smith.jpg" alt="John Smith">
+                    <img src="images/john_smith.jpg" alt="John Smith rafting guide">
                     <figcaption>John Smith – Lead Guide</figcaption>
                 </figure>
+
                 <figure>
-                    <img src="images/jane_doe.jpg" alt="Jane Doe">
+                    <img src="images/jane_doe.jpg" alt="Jane Doe customer service manager">
                     <figcaption>Jane Doe – Customer Service Manager</figcaption>
                 </figure>
+
                 <figure>
-                    <img src="images/mike_jones.jpg" alt="Mike Jones">
+                    <img src="images/mike_jones.jpg" alt="Mike Jones safety officer">
                     <figcaption>Mike Jones – Safety Officer</figcaption>
                 </figure>
             </div>
         </section>
 
     </main>
+
     <footer>
         <p>&copy; 2026 White Water Rafting Co. | Thomas Dettmar</p>
 
         <nav class="socialmedia">
-            <a href="https://facebook.com"><img src="images/facebook.svg" alt="Facebook"></a>
-            <a href="https://linkedin.com"><img src="images/linkedin.svg" alt="LinkedIn"></a>
-            <a href="https://instagram.com"><img src="images/instagram.svg" alt="Instagram"></a>
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Visit our Facebook page">
+            </a>
+            <a href="https://linkedin.com">
+                <img src="images/linkedin.svg" alt="Visit our LinkedIn profile">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Visit our Instagram page">
+            </a>
         </nav>
     </footer>
+
+</body>
+
+</html>
